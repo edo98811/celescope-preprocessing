@@ -13,13 +13,13 @@ SAMPLE_LIST: Specifies a list of samples to be processed.
 Example: ["PD_021"]
 
 ## Example usage 
-Only to be run once, to prepare the genome.
-- **`preparegenome`**
-To delete all the spaces in the directory names 
-- **`preparedir`** 
- Create the mapfile.
-- **`mapfile`**
-Run the celescope command to create the shell scripts necessary to run the pipeline.
-- **`preparerun`**  
-Run celescope
-- **`run`** 
+
+- **`celescope-helper preparegenome`** Only to be run once, to prepare the genome.
+
+- **`celescope-helper preparedir`**  To delete all the spaces in the directory names 
+
+- **`celescope-helper mapfile`**  Create the mapfile.
+
+- **`celescope-helper preparerun`**  Run the celescope command to create the shell scripts necessary to run the pipeline.
+
+- **`celescope-helper run`** Run celescope
