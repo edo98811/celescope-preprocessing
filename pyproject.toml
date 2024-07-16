@@ -15,3 +15,6 @@ typing = "^3.10.0.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+celescope-helper = "click_app.main:cli"
