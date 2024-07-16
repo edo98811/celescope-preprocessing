@@ -1,0 +1,8 @@
+
+{
+    "BASE_WORKING_DIR": "/mnt/S/edoardoStorage",
+    "GENOME_DIR": "/mnt/S/edoardoStorage/mmu_ensembl_99",
+    "DATA_DIR": "/mnt/S/edoardoStorage/Pipeline_matrix_creation/RawData",
+    "OUTPUT_DIR": "/mnt/S/edoardoStorage/Pipeline_matrix_creation/Results",
+    "SAMPLE_LIST": ["PD_021"]
+}
