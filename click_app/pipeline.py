@@ -30,10 +30,10 @@ def prepare_genome(genome_path: Path, type: str = "mouse") -> None:
     shutil.copy(bash_script, genome_dir / bash_script)
 
     # Change to genome directory and run the script
-    original_directory = Path.cwd()
+    base_working_dir = Path.cwd()
     os.chdir(genome_dir)
     subprocess.run(['sh', bash_script])
-    os.chdir(original_directory)
+    os.chdir(base_working_dir)
 
 def create_map_files(data_path: Path) -> None:
     mapfile_data = []
@@ -55,7 +55,7 @@ def _save_map_file(fastq_info: list, data_path: Path) -> None:
         for info in fastq_info:
             mapfile.write(info + '\n')
 
-def prepare_run(base_working_dir: Path, data_path: Path, output_dir: Path, genome_dir: Path) -> None:
+def prepare_run(data_path: Path, output_dir: Path, genome_dir: Path) -> None:
     cmd = [
         "multi_rna",
         "--mapfile", "./mapfile",
@@ -64,7 +64,8 @@ def prepare_run(base_working_dir: Path, data_path: Path, output_dir: Path, genom
         "--mod", "shell",
         "--outdir", str(output_dir)
     ]
-
+    base_working_dir = Path.cwd()
+    
     try:
         # Change to data_path
         os.chdir(data_path)

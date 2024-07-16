@@ -31,7 +31,7 @@ def mapfile(ctx: click.Context):
 @cli.command()
 def preparerun(ctx: click.Context):
     """Run celescope command to create the shell scripts necessary to run the pipeline."""
-    pipeline.prepare_run(ctx.obj["config"]["BASE_WORKING_DIR"], ctx.obj["config"]["DATA_DIR"], ctx.obj["config"]["OUTPUT_DIR"], ctx.obj["config"]["GENOME_DIR"])
+    pipeline.prepare_run(ctx.obj["config"]["DATA_DIR"], ctx.obj["config"]["OUTPUT_DIR"], ctx.obj["config"]["GENOME_DIR"])
 
 @cli.command()
 def run(ctx: click.Context):
