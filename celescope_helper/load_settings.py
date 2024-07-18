@@ -21,7 +21,7 @@ def load_config():
         else:
             raise FileNotFoundError(f'Configuration file {config_path} not found.')
     except FileNotFoundError as e:
-        raise click.ClickException(f"{e}. Use 'celescope-helper create-config' to create it and update it.")
+        raise click.ClickException(f"{e}. Use 'celescope-helper init-config' to create it and update it.")
     
 def create_config(destination: str):
     dest_path = Path(destination)
