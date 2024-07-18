@@ -1,19 +1,22 @@
 [tool.poetry]
-name = "celescope-preprocessing"
+name = "celescope-helper"
 version = "0.1.0"
 description = "A tool to simplify count matrix preparation with celescope"
 authors = ["edo98811 <edoardofilippi77@gmail.com>"]
 readme = "README.md"
+include = [
+    {path = "celescope_helper/settings.json"},
+    {path = "celescope_helper/location.json"}
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 click = "^8.1.7"
 pathlib = "^1.0.1"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-celescope-helper = "click_app.main:cli"
+celescope-helper = "celescope_helper.__main__:base"
