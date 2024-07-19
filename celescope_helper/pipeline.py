@@ -26,7 +26,7 @@ def prepare_genome(genome_path: Path, type: str = 'mouse') -> None:
     genome_dir.mkdir(parents=True, exist_ok=True)
 
     # Copy script to genome directory
-    bash_script = Path.cwd() / 'click_app'/ 'prepare_genome_reference_human.sh' if type == 'human' else Path.cwd() / 'click_app'/ 'prepare_genome_reference_mouse.sh'
+    bash_script = Path(__file__).parent / 'prepare_genome_reference_human.sh' if type == 'human' else Path(__file__).parent / 'prepare_genome_reference_mouse.sh'
     shutil.copy(bash_script, genome_dir / 'prepare_genome.sh')
 
     # Change to genome directory and run the script
