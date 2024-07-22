@@ -47,13 +47,6 @@ def preparerun(ctx: click.Context):
 def run(ctx: click.Context):
     """Celescope run."""
     pipeline.run(ctx.obj["config"]["SAMPLE_LIST"], Path(ctx.obj["config"]["DATA_DIR"]))
-
-    
-@tool.command()
-@click.pass_context
-def invalid_option():
-    """Invalid option handler."""
-    click.echo("Invalid option. Please provide a valid option.")
         
 @base.command()
 @click.argument('destination', type=click.Path())
