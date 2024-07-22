@@ -12,14 +12,14 @@ How to set up the settings configuration file. All paths are absolute
 - **`SAMPLE_LIST`**: Specifies a list of samples to be processed.
 Example: ["PD_021"]
 
-## Example usage 
+## Commands
+- **`celescope-helper init-config`** requires one argument, path to the new config file that needs to be created, it needs to be a .json file
+Arguments: string, path to config file, including the name of the file, the name needs to be ajson file. example: "/mnt/S/edoardoStorage/config.json"
 
-- **`celescope-helper preparegenome`** Only to be run once, to prepare the genome.
+- **`celescope-helper tool preparegenome`** Only to be run once, to prepare the genome (and download it automatically from source).
 
-- **`celescope-helper preparedir`**  To delete all the spaces in the directory names 
+- **`celescope-helper tool mapfile`**  Create the mapfile.
 
-- **`celescope-helper mapfile`**  Create the mapfile.
+- **`celescope-helper tool preparerun`**  Run the celescope command to create the shell scripts necessary to run the pipeline.
 
-- **`celescope-helper preparerun`**  Run the celescope command to create the shell scripts necessary to run the pipeline.
-
-- **`celescope-helper run`** Run celescope
+- **`celescope-helper tool run`** Run celescope
