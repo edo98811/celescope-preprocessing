@@ -1,5 +1,7 @@
 # App to simplify the celescope pipeline
 ## Installation 
+Built with python 3.12
+
 ```
 git clone https://github.com/edo98811/celescope-preprocessing.git
 cd celescope-preprocessing
